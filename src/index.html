@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="">
+      <section
+        class="grid grid-cols-1 md:grid-cols-3 p-5 h-auto md:h-screen place-content-center bg-[#eee]"
+      >
+        <!-- selcect -->
+        <div class="flex flex-col items-center p-5">
+          <div class="w-full"><p class="text-2xl mb-5 p-2">Add Task</p></div>
+          <!-- selectdate -->
+          <div class="flex flex-col gap-2 w-full">
+            <input
+              class="border-2 border-gray-200 rounded-lg p-2 bg-white"
+              type="text"
+              placeholder="enter task name"
+              id="ip-1"
+            />
+            <input
+              class="border-2 border-gray-200 rounded-lg p-2 bg-white"
+              type="datetime-local"
+              id="ip-2"
+            />
+            <select
+              name=""
+              id="select"
+              class="bg-gray-200 border-2 border-black rounded-lg p-2 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            >
+              <option value="height">height</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+            <button
+              class="rounded-md bg-blue-600 w-32 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+              type="button"
+              id="btn"
+            >
+              Button Blue
+            </button>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="col-span-2 h-[600px] rounded-md overflow-y-auto">
+          <table
+            class="w-full text-sm text-left bg-blue-600 rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead
+              class="sticky h-[50px] top-0 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="px-6 py-3">Task name</th>
+                <th scope="col" class="px-6 py-3">DueDate</th>
+                <th scope="col" class="px-6 py-3">Prority</th>
+                <th scope="col" class="px-6 py-3">Status</th>
+              </tr>
+            </thead>
+            <tbody id="record" class=""></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
